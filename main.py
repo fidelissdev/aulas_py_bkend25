@@ -1,32 +1,20 @@
-# import calculo --- calculo.dobro()
-# importando de outro jeito:
-from calculo import dobro, triplo, quadrado
-from interface import mostra_menu
+from interface import mostra_menu, analisa_opcao, LISTA_OPCOES
 
 while True:
+    print("BEM-VINDO A CALCULADORA SENAI")
+
     mostra_menu()
 
     opcao = input("Digite a opção desejada: ")
 
-    if opcao == "1":
-        numero = input("Iniciando cálculo do dobro... Digite o numero: ")
-        dobronum = dobro(numero) # chamando a função dobro com o num do usuario
-        print(f"O dobro de {numero} é {dobronum}")
+    if opcao == "4":
+        print("-- ENCERRANDO PROGRAMA... ") 
+        break       
 
-    elif opcao == "2":
-        numero = input("Iniciando cálculo do triplo... Digite o numero: ")
-        triplonum = triplo(numero) # chamando a função triplo com o num do usuario
-        print(f"O triplo de {numero} é {triplonum}")
 
-    elif opcao == "3":
-        numero = input("Iniciando cálculo do quadrado... Digite o numero: ")
-        quadradonum = quadrado(numero) # chamando a função quadrado com o num do usuario
-        print(f"O quadrado de {numero} é {quadradonum}")
-
-    elif opcao == "4":
-        print("-- ENCERRANDO PROGRAMA... ")
-        break
-
-    else :
+    elif opcao not in LISTA_OPCOES:       # ALTERNATIVA: opcao != "1" and opcao != "2" and opcao != "3"
         print("Opção invalida! \n")
         continue    
+
+    else:
+        analisa_opcao(opcao)
