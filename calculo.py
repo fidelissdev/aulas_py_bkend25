@@ -3,3 +3,7 @@ def dobro(numero):
 
 def triplo(num):
     return int(num) * 3
+
+def quadrado(num):
+    return int(num) ** 2
+

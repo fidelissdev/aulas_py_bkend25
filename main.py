@@ -1,20 +1,32 @@
-# import calculo
+# import calculo --- calculo.dobro()
 # importando de outro jeito:
-from calculo import dobro, triplo
+from calculo import dobro, triplo, quadrado
+from interface import mostra_menu
 
-print("ola mundo agora no vscode \n")
-print("programa dos calculos")
-print("-" * 50)
+while True:
+    mostra_menu()
 
-x = input("Digite o numero e vou dizer o dobro:")
+    opcao = input("Digite a opção desejada: ")
 
-dobro = dobro(x)
+    if opcao == "1":
+        numero = input("Iniciando cálculo do dobro... Digite o numero: ")
+        dobronum = dobro(numero) # chamando a função dobro com o num do usuario
+        print(f"O dobro de {numero} é {dobronum}")
 
-print(f"o dobro de {x} é {dobro}")
+    elif opcao == "2":
+        numero = input("Iniciando cálculo do triplo... Digite o numero: ")
+        triplonum = triplo(numero) # chamando a função triplo com o num do usuario
+        print(f"O triplo de {numero} é {triplonum}")
 
+    elif opcao == "3":
+        numero = input("Iniciando cálculo do quadrado... Digite o numero: ")
+        quadradonum = quadrado(numero) # chamando a função quadrado com o num do usuario
+        print(f"O quadrado de {numero} é {quadradonum}")
 
-y = input("Agora, digite outro numero e vou dizer o triplo")
+    elif opcao == "4":
+        print("-- ENCERRANDO PROGRAMA... ")
+        break
 
-triplo = triplo(y)
-
-print(f"O trplo de {y} é {triplo}")
+    else :
+        print("Opção invalida! \n")
+        continue    
