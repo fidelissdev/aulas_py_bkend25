@@ -1,5 +1,6 @@
 from interface import mostra_menu, analisa_opcao, LISTA_OPCOES
 
+
 while True:
     print("BEM-VINDO A CALCULADORA SENAI")
 

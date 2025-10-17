@@ -1,4 +1,5 @@
-from calculo import dobro, triplo, quadrado, raiz_quadrada
+from calculo import dobro, triplo, quadrado, raiz_quadrada 
+
 
 LISTA_OPCOES = ["1","2","3","8"]
 
